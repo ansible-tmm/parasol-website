@@ -46,6 +46,10 @@ header {
     flex-shrink: 0;
 }
 
+.logo a {
+    display: block;
+}
+
 .logo img {
     height: 50px;
     width: auto;
@@ -53,14 +57,14 @@ header {
 
 .nav-menu {
     display: flex;
-    gap: 30px;
+    gap: 5px;
     flex: 1;
     justify-content: center;
 }
 
 .nav-right {
     display: flex;
-    gap: 25px;
+    gap: 5px;
     align-items: center;
 }
 
@@ -71,11 +75,36 @@ header {
     font-weight: 500;
     white-space: nowrap;
     cursor: pointer;
-    padding: 10px 0;
+    padding: 12px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
+/* Remove visited link color change */
+.nav-item:visited {
+    color: #333;
+}
+
+/* Hover state */
 .nav-item:hover {
-    color: #e87722;
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* Active/current page state */
+.nav-item.active {
+    background: #333;
+    color: white;
+}
+
+.nav-item.active:visited {
+    color: white;
+}
+
+.nav-item.active:hover {
+    background: #444;
+    color: white;
 }
 
 .dropdown {
@@ -105,11 +134,22 @@ header {
     color: #333;
     text-decoration: none;
     font-size: 14px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:visited {
+    color: #333;
 }
 
 .dropdown-content a:hover {
-    background: #f5f5f5;
-    color: #e87722;
+    background: #e87722;
+    color: white;
+}
+
+.dropdown-content a.active {
+    background: #333;
+    color: white;
 }
 
 .nav-extra {
@@ -127,10 +167,31 @@ header {
     color: #333;
     text-decoration: none;
     font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.find-agent:visited {
+    color: #333;
 }
 
 .find-agent:hover {
-    color: #e87722;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.find-agent.active {
+    background: #333;
+    color: white;
+}
+
+.find-agent.active:visited {
+    color: white;
+}
+
+.find-agent.active:hover {
+    background: #444;
 }
 
 /* Hero Slider */
