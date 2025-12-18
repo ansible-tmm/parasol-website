@@ -281,8 +281,16 @@ header {
 .insurance-plans h2 {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     color: #333;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 50px;
+    font-style: italic;
 }
 
 .plans-grid {
@@ -352,8 +360,48 @@ header {
 .why-choose-us h2 {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     color: #333;
+}
+
+/* Red Hat Section */
+.redhat-section {
+    padding: 80px 20px;
+    background: white;
+}
+
+.redhat-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.redhat-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.redhat-feature {
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #ee0000;
+}
+
+.redhat-feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.redhat-feature p {
+    color: #666;
+    line-height: 1.6;
 }
 
 .features-grid {
@@ -509,6 +557,207 @@ footer {
     .slide-content h1 {
         font-size: 3rem;
     }
+}
+
+/* Page Hero */
+.page-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* Content Section */
+.content-section {
+    padding: 60px 20px;
+    background: white;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content-section h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.benefits-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.benefits-list li {
+    padding: 10px 0;
+    padding-left: 30px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.benefits-list li:before {
+    content: "☂️";
+    position: absolute;
+    left: 0;
+}
+
+.testimonial {
+    background: #f8f9fa;
+    border-left: 4px solid #e87722;
+    padding: 25px;
+    margin: 30px 0;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.team-member {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #e87722;
+}
+
+.team-member h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.team-member p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Tools/Events Grid */
+.tools-grid,
+.events-grid,
+.agents-grid,
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.tool-card,
+.event-card,
+.agent-card,
+.support-card {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    transition: all 0.3s;
+}
+
+.tool-card:hover,
+.event-card:hover,
+.agent-card:hover,
+.support-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-color: #e87722;
+}
+
+.agent-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.agent-title {
+    font-weight: 600;
+    color: #e87722;
+    margin-bottom: 10px;
+}
+
+/* Quote Form */
+.quote-form {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #e87722;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.quote-result {
+    margin-top: 30px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid #4CAF50;
+}
+
+.quote-details {
+    margin: 20px 0;
+}
+
+.quote-details p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.quote-note {
+    background: #fff3cd;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+    border-left: 4px solid #ffc107;
 }
 
 @media (max-width: 768px) {

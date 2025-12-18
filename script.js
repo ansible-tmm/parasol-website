@@ -73,10 +73,56 @@ if (slider) {
 // Button click handlers
 document.querySelectorAll('.cta-button, .plan-button').forEach(button => {
     button.addEventListener('click', function(e) {
-        e.preventDefault();
-        alert('Thank you for your interest! This is a demo website. In a real implementation, this would take you to a quote form or more information.');
+        // Don't prevent default for actual links
+        if (this.tagName === 'BUTTON') {
+            e.preventDefault();
+            alert('Thank you for your interest! This is a demo website. In a real implementation, this would take you to a quote form or more information.');
+        }
     });
 });
+
+// Quote form handler
+const quoteForm = document.getElementById('quoteForm');
+if (quoteForm) {
+    quoteForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const insuranceType = document.getElementById('insuranceType').value;
+        const startTime = Date.now();
+
+        // Simulate processing time
+        setTimeout(() => {
+            const endTime = Date.now();
+            const processingTime = ((endTime - startTime) / 1000).toFixed(2);
+
+            // Map insurance types to agents and prices
+            const agentMap = {
+                'auto': { name: 'Matthew Packer', price: '125' },
+                'home': { name: 'Nuno Martins', price: '180' },
+                'life': { name: 'Anshul Behl', price: '95' },
+                'travel': { name: 'Aubrey Trotter', price: '45' }
+            };
+
+            const typeMap = {
+                'auto': '🚗 Auto Insurance',
+                'home': '🏠 Home Insurance',
+                'life': '❤️ Life Insurance',
+                'travel': '✈️ Travel Insurance'
+            };
+
+            const agent = agentMap[insuranceType];
+
+            // Show results
+            document.getElementById('resultType').textContent = typeMap[insuranceType];
+            document.getElementById('resultAgent').textContent = agent.name;
+            document.getElementById('resultPrice').textContent = agent.price;
+            document.getElementById('resultTime').textContent = processingTime;
+
+            document.getElementById('quoteResult').style.display = 'block';
+            document.getElementById('quoteResult').scrollIntoView({ behavior: 'smooth' });
+        }, 800);
+    });
+}
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

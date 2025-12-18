@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote - Parasol Insurance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html"><img src="images/parasol-logo-black-fix.png" alt="Parasol Insurance Logo"></a>
+                </div>
+                <div class="nav-menu">
+                    <div class="nav-item dropdown">
+                        <a href="#insurance">Insurance Types ▾</a>
+                        <div class="dropdown-content">
+                            <a href="auto.html">Auto Insurance</a>
+                            <a href="home.html">Home Insurance</a>
+                            <a href="life.html">Life Insurance</a>
+                            <a href="travel.html">Travel Insurance</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="why-redhat.html">Why we chose Red Hat ▾</a>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="shopping.html">Shopping Tools ▾</a>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <a href="company.html" class="nav-item">Company</a>
+                    <a href="community.html" class="nav-item">Community</a>
+                    <a href="support.html" class="nav-item">Support</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>💰 Get Your Free Quote - Lightning Fast Thanks to Red Hat!</h1>
+            <p>Our quote system is faster than a weather forecast (and more accurate too!)</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2>Leonardo Gallego's Lightning-Fast Quote System</h2>
+            <p>Leonardo Gallego galloped into the office one day and declared, "Quotes should be faster than horses!" So we built a quote system powered by Red Hat OpenShift that generates quotes in seconds, not minutes. Leonardo personally ensures every quote is competitively priced and fair!</p>
+
+            <div class="quote-form">
+                <h3>Get Your Free Quote (Demo Form)</h3>
+                <p><em>This is a demo website - no real insurance policies will be issued!</em></p>
+
+                <form id="quoteForm">
+                    <div class="form-group">
+                        <label for="insuranceType">What type of insurance do you need?</label>
+                        <select id="insuranceType" name="insuranceType" required>
+                            <option value="">Select insurance type...</option>
+                            <option value="auto">🚗 Auto Insurance (Matthew Packer's specialty!)</option>
+                            <option value="home">🏠 Home Insurance (Nuno Martins has you covered!)</option>
+                            <option value="life">❤️ Life Insurance (Anshul Behl's expertise!)</option>
+                            <option value="travel">✈️ Travel Insurance (Aubrey Trotter's domain!)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="zip">ZIP Code</label>
+                        <input type="text" id="zip" name="zip" required placeholder="12345" pattern="[0-9]{5}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="coverage">Desired Coverage Level</label>
+                        <select id="coverage" name="coverage" required>
+                            <option value="">Select coverage level...</option>
+                            <option value="basic">Basic - Just the essentials</option>
+                            <option value="standard">Standard - Most popular!</option>
+                            <option value="premium">Premium - Maximum protection</option>
+                            <option value="umbrella">Ultimate Umbrella - Everything covered!</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="redhat" name="redhat" checked disabled>
+                            Process my quote using Red Hat OpenShift (automatic and required because it's awesome!)
+                        </label>
+                    </div>
+
+                    <button type="submit" class="cta-button large">Get My Free Quote - Powered by Red Hat!</button>
+                </form>
+
+                <div id="quoteResult" class="quote-result" style="display: none;">
+                    <h3>🎉 Your Instant Quote is Ready!</h3>
+                    <div class="quote-details">
+                        <p><strong>Insurance Type:</strong> <span id="resultType"></span></p>
+                        <p><strong>Your Expert Agent:</strong> <span id="resultAgent"></span></p>
+                        <p><strong>Estimated Monthly Premium:</strong> $<span id="resultPrice"></span></p>
+                        <p><strong>Processing Time:</strong> <span id="resultTime"></span> seconds (Thanks, Red Hat OpenShift!)</p>
+                        <p class="quote-note">💡 This quote was calculated using Red Hat-powered algorithms considering your location, coverage needs, and current market conditions!</p>
+                    </div>
+                    <a href="agents.html" class="cta-button">Connect with Your Agent</a>
+                </div>
+            </div>
+
+            <h3>Why Our Quote System is Weather-Forecast Fast</h3>
+            <ul class="benefits-list">
+                <li>⚡ <strong>Red Hat OpenShift Processing:</strong> Your quote is calculated across multiple containers simultaneously. It's like having a whole team of Leonardo Gallegos crunching numbers!</li>
+                <li>🤖 <strong>Ansible Automation:</strong> Andrius Benokraitis automated the entire quote workflow. No human bottlenecks - just pure, automated efficiency!</li>
+                <li>🔐 <strong>Secure & Private:</strong> Justin Braun ensured your data is encrypted using RHEL's built-in security. Your information is safer than coffee in Justin's hands!</li>
+                <li>📱 <strong>Mobile Optimized:</strong> Get quotes from your phone, tablet, or computer. OpenShift makes our platform work everywhere!</li>
+                <li>🌍 <strong>Available 24/7:</strong> Unlike humans, our Red Hat systems never sleep! Get a quote at 3 AM if you want - we won't judge!</li>
+            </ul>
+
+            <div class="testimonial">
+                <p>"I got a quote faster than my pizza delivery! Leonardo's team must have magic powers... or really good technology. Turns out it's Red Hat! I'm now insured and impressed!" - Happy Quote Recipient</p>
+            </div>
+
+            <h3>What Happens After You Get Your Quote?</h3>
+            <ol class="benefits-list">
+                <li>📧 You'll receive an email confirmation (powered by Red Hat messaging systems)</li>
+                <li>📞 Your dedicated agent will call you within 24 hours (or faster!)</li>
+                <li>📋 Review your customized policy options with an expert</li>
+                <li>✅ Sign up in minutes using our Red Hat-secured e-signature platform</li>
+                <li>🎉 You're covered! Welcome to the Parasol family!</li>
+            </ol>
+
+            <div class="redhat-feature">
+                <h3>🎯 The Technology Behind Your Quote</h3>
+                <p>Roger Lopez (Chief Risk Officer) and Leonardo Gallego (CFO) collaborated with Hicham Mourad (DevOps) to build a quote system that's both accurate and fast. The system runs on Red Hat OpenShift, uses Red Hat Ansible for automation, and is secured by RHEL. Every quote goes through:</p>
+                <ul class="benefits-list">
+                    <li>✓ Real-time risk assessment algorithms</li>
+                    <li>✓ Market comparison analysis</li>
+                    <li>✓ Compliance verification</li>
+                    <li>✓ Multi-factor pricing calculations</li>
+                    <li>✓ All in under 2 seconds!</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <img src="images/parasol-logo-black-fix.png" alt="Parasol Insurance">
+                </div>
+                <p>&copy; 2024 Parasol Insurance Company. Quote System Powered by Red Hat OpenShift.</p>
+                <p>Quote accuracy guaranteed by Leonardo Gallego | Risk assessment by Roger Lopez | Infrastructure by Hicham Mourad</p>
+                <p><a href="index.html" style="color: #e87722;">Back to Home</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
